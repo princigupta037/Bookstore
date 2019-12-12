@@ -3,48 +3,55 @@ from django.shortcuts import render
 from .models import *
 from .forms import *
 
-'''def post_list(request):
-    # posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'myblog.html', {'posts': posts})
+def p(request):
+    posts = Python.objects.all()
+    return render(request, 'python.html', {'posts': posts})
 
-def post_detail(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blogdetail.html', {'post': post})
+def j(request):
+    posts = Python.objects.all()
+    return render(request, 'Java.html', {'posts': posts})
 
-def post_new(request):
-    if request.method == "POST":
-        form = PostForm(request.POST)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.published_date = timezone.now()
-            post.save()
-            return redirect('post_detail', pk=post.pk)
-    else:
-        form = PostForm()
-    return render(request, 'blogedit.html', {'form': form})
+def php(request):
+    posts = Python.objects.all()
+    return render(request, 'PHP.html', {'posts': posts})
 
-def post_edit(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    if request.method == "POST":
-        form = PostForm(request.POST, instance=post)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.published_date = timezone.now()
-            post.save()
-            return redirect('post_detail', pk=post.pk)
-    else:
-        form = PostForm(instance=post)
-    return render(request, 'blogedit.html', {'form': form})
-    '''
+def csharp(request):
+    posts = Python.objects.all()
+    return render(request, 'C#.html', {'posts': posts})
 
-def adminlogin(request):
-    return render(request,'adminlogin.html',{})
+def cplus(request):
+    posts = Python.objects.all()
+    return render(request, 'C++.html', {'posts': posts})
 
-def newlogin(request):
-    return render(request,'newlogin.html',{})
+def c(request):
+    posts = Python.objects.all()
+    return render(request, 'C.html', {'posts': posts})
 
-def catlog(request):
-    return render(request,'catlog.html',{})
+
+def ruby(request):
+    posts = Python.objects.all()
+    return render(request, 'Ruby.html', {'posts': posts})
+
+def electrical(request):
+    posts = Python.objects.all()
+    return render(request, 'Electrical.html', {'posts': posts})
+
+def electronics(request):
+    posts = Python.objects.all()
+    return render(request, 'Electronics.html', {'posts': posts})
+
+def civil(request):
+    posts = Python.objects.all()
+    return render(request, 'Civil.html', {'posts': posts})
+
+def mechanical(request):
+    posts = Python.objects.all()
+    return render(request, 'Mechanical.html', {'posts': posts})
+
+
+
+
+
+
+
 

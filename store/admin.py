@@ -2,8 +2,12 @@ from django.contrib import admin
 from .models import *
 
 
-admin.site.register(Computer)
-admin.site.register(Electronics)
+admin.site.register(Python)
+admin.site.register(Java)
+admin.site.register(Csharp)
+admin.site.register(Cplus)
+admin.site.register(Ruby)
+admin.site.register(PHP)
 admin.site.register(Electrical)
-admin.site.register(Mechanical)
-admin.site.register(civil)
+admin.site.register(Electronics)
+admin.site.register(Civil)
