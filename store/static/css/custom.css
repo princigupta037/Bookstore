@@ -1,4 +1,10 @@
 body {
-    background-color: cornflowerblue;
+    background-color: rgb(176, 207, 212);
     font-weight: 900;
+   
+    
+}
+.container{
+    text-align: center;
+    
 }

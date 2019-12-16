@@ -1,0 +1,81 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<center>
+<br><br>
+<h1><a href="#"> <strong><u> Book Store</u></strong> </a></h1><br>
+{% load static %}<br><br>
+
+  <div class="container">
+      <div class="row">
+        {% if messages %}
+          {% for message in messages %}
+              <div class=" alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+  </div>
+
+
+
+
+
+  <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+          <div class="col-md-4">
+            <a href="{% url 'c' %}" target="_blank">  
+              <button type="button" class="btn btn-primary btn-lg btn-block">Computer</button>
+            </a>
+          </div> 
+        </div><br>
+      <div class="row">  
+          <div class="col-md-4">
+            </div>
+        <div class="col-md-4">
+          <a href="{% url 'el' %}" target="_blank">
+            <div class="caption">
+              <button type="button" class="btn btn-secondary btn-lg btn-block">Electrical</button><br>
+            </div>
+          </a>
+        </div>
+      </div><br>
+      <div class="row">  
+          <div class="col-md-4">
+            </div>
+        <div class="col-md-4">
+          <a href="{% url 'e' %}" target="_blank">
+            <div class="caption">
+              <button type="button" class="btn btn-success btn-lg btn-block">Electronic</button><br>
+            </div>
+          </a>
+        </div>
+      </div><br>
+      <div class="row">  
+          <div class="col-md-4">
+            </div>
+        <div class="col-md-4">
+          <a href="{% url 'ci' %}" target="_blank">
+            <div class="caption">
+              <button type="button" class="btn btn-danger btn-lg btn-block">Civil</button>
+            </div>
+          </a>
+        </div>
+      </div><br>
+      <div class="row">  
+          <div class="col-md-4">
+            </div>
+        <div class="col-md-4">
+          <a href="{% url 'm' %}" target="_blank">
+            <div class="caption">
+             <button type="button" class="btn btn-warning btn-lg btn-block">Mechanical</button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
+</center>
+{% endblock %}

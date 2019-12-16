@@ -1,23 +1,8 @@
-'''from django import forms
-from .models import *
+from django import forms
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 
-class Computer(forms.ModelForm):
+class UserRegisterForm(UserCreationForm):
     class Meta:
-        model = Computer
-        fields = ('book',)
-
-class Electronics(forms.ModelForm):
-    class Meta:
-        model = Electronics
-        fields = ('book',)
-    
-class Electrical(forms.ModelForm):
-    class Meta:
-        model = Electrical
-        fields = ('book',)
-
-class  Mechanical (forms.ModelForm):
-    class Meta:
-        model = Mechanical
-        fields = ('book',)
-'''
+        model = User
+        fields = ['username', 'password1', 'password2']
